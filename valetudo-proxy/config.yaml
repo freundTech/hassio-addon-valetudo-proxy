@@ -1,0 +1,25 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: Valetudo Proxy
+version: "0.1.0"
+slug: valetudo-proxy
+description: Allows using the Valetudo web interface from inside Home Assistant
+url: "https://github.com/freundTech/hassos-addon-valetudo-proxy/tree/main/valetudo-proxy"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+init: false
+ingress: true
+panel_icon: mdi:robot-vacuum
+map:
+  - share:rw
+options:
+  address: valetudo.local
+  username: null
+  password: null
+schema:
+  address: str
+  username: "str?"
+  password: "str?"

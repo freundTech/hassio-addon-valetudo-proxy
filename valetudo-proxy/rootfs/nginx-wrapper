@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bashio
+
+bashio::var.json \
+    address "$(bashio::config 'address')" \
+    username "$(bashio::config 'username')" \
+    password "$(bashio::config 'password')" \
+    | tempio \
+        -template /etc/nginx/nginx.conf.gtpl \
+        -out /etc/nginx/nginx.conf
+
+exec nginx

@@ -1,0 +1,10 @@
+configuration:
+  address:
+    name: Address
+    description: The domain or IP address of the Valetudo robot
+  username:
+    name: Username
+    description: The username for the Valetudo robot basicauth
+  password:
+    name: Password
+    description: The password for the Valetudo robot basicauth
